@@ -7,7 +7,7 @@ Inspired in googlesamples / [android-topeka](https://github.com/googlesamples/an
 
 ## Screenshot
 
-![](https://aa1a5cf3c6e3569b77b29843c3f5b6ba8b369090.googledrive.com/host/0B9hNKr5AY4xXTXktOS11VlBaemM/2015-12-15_framed.png)
+![](https://aa1a5cf3c6e3569b77b29843c3f5b6ba8b369090.googledrive.com/host/0B9hNKr5AY4xXTXktOS11VlBaemM/2015-12-15.png)
 
 
 Developed By
