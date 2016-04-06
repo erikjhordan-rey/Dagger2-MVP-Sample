@@ -13,18 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.categories;
 
-package gdg.androidtitlan.dagger2_demo.ui.main;
+import dagger.Module;
+import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
 
-import java.util.List;
+@Module public class MainModule {
 
-public interface MainView {
+  private MainView view;
 
-  void showProgress();
+  public MainModule(MainView view) {
+    this.view = view;
+  }
 
-  void hideProgress();
+  @Provides public MainView provideView() {
+    return view;
+  }
 
-  void setItems(List<Category> categories);
-
-  void showMessage(String message);
+  @Provides
+  public MainPresenter providePresenter(MainView mainView, CategoryInteractor categoryInteractor) {
+    return new MainPresenterImpl(mainView, categoryInteractor);
+  }
 }

@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.ui.main;
+package gdg.androidtitlan.dagger2_demo.common;
 
-import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.ActivityScope;
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-@ActivityScope @Component(
-    dependencies = AppComponent.class,
-    modules = MainModule.class) public interface MainComponent {
-  void inject(MainActivity mainActivity);
+import gdg.androidtitlan.dagger2_demo.di.App;
+import gdg.androidtitlan.dagger2_demo.di.AppComponent;
 
-  MainPresenter getMainPresenter();
+public abstract class BaseActivity extends AppCompatActivity {
+
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setupComponent((AppComponent) App.get(this).component());
+  }
+
+  protected abstract void setupComponent(AppComponent appComponent);
 }

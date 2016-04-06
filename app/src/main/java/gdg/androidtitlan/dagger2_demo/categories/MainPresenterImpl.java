@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.ui.main;
+package gdg.androidtitlan.dagger2_demo.categories;
 
+import gdg.androidtitlan.dagger2_demo.model.Category;
 import java.util.List;
 
 import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
 
-public class MainPresenterImpl implements MainPresenter, CallBack {
+public class MainPresenterImpl implements MainPresenter, Callback {
 
   private MainView mainView;
   private CategoryInteractor categoryInteractor;
@@ -32,15 +33,15 @@ public class MainPresenterImpl implements MainPresenter, CallBack {
 
   @Override public void onResume() {
     mainView.showProgress();
-    categoryInteractor.findItems(this);
+    categoryInteractor.loadCategories(this);
   }
 
-  @Override public void onItemSelected(int position) {
-    mainView.showMessage(String.format("Position %d clicked", position + 1));
+  @Override public void onItemSelected(Category category, int position) {
+    mainView.showMessage(String.format(category.getName() +" ->" +" Position %d clicked", position));
   }
 
-  @Override public void onFinished(List<Category> items) {
-    mainView.setItems(items);
+  @Override public void onLoadCategories(List<Category> categories) {
+    mainView.showCategories(categories);
     mainView.hideProgress();
   }
 }

@@ -13,37 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.di;
 
-package gdg.androidtitlan.dagger2_demo.ui.main;
+import android.app.Application;
 
-public class Category {
+import javax.inject.Singleton;
 
-  private String mName;
-  private int mIcon;
-  private int mBackgroundColor;
+import dagger.Module;
+import dagger.Provides;
 
-  public Category(String mName, int mIcon, int mBackgroundColor, int mPrimaryColor) {
-    this.mName = mName;
-    this.mIcon = mIcon;
-    this.mBackgroundColor = mBackgroundColor;
-    this.mPrimaryColor = mPrimaryColor;
+@Module public class AppModule {
+
+  private App app;
+
+  public AppModule(App app) {
+    this.app = app;
   }
 
-  private int mPrimaryColor;
-
-  public String getName() {
-    return mName;
-  }
-
-  public int getIcon() {
-    return mIcon;
-  }
-
-  public int getBackgroundColor() {
-    return mBackgroundColor;
-  }
-
-  public int getPrimaryColor() {
-    return mPrimaryColor;
+  @Provides @Singleton public Application provideApplication() {
+    return app;
   }
 }

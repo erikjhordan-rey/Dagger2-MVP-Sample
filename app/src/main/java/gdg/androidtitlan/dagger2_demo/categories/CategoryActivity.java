@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.ui.main;
+package gdg.androidtitlan.dagger2_demo.categories;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -24,16 +24,17 @@ import android.widget.AdapterView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import gdg.androidtitlan.dagger2_demo.model.Category;
 import java.util.List;
 
 import javax.inject.Inject;
 
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+import gdg.androidtitlan.dagger2_demo.di.AppComponent;
 import gdg.androidtitlan.dagger2_demo.R;
-import gdg.androidtitlan.dagger2_demo.ui.common.BaseActivity;
+import gdg.androidtitlan.dagger2_demo.common.BaseActivity;
 
-public class MainActivity extends BaseActivity
-    implements MainView, AdapterView.OnItemClickListener {
+public class CategoryActivity extends BaseActivity
+    implements MainView, CategoryAdapter.ItemClickListener {
 
   @Inject MainPresenter presenter;
   private ProgressBar progressBar;
@@ -70,19 +71,16 @@ public class MainActivity extends BaseActivity
     recyclerView.setVisibility(View.VISIBLE);
   }
 
-  @Override public void setItems(List<Category> items) {
+  @Override public void showCategories(List<Category> items) {
 
     CategoryAdapter categoryAdapter = new CategoryAdapter();
     categoryAdapter.setCategories(items);
+    categoryAdapter.setItemClickListener(this);
     recyclerView.setAdapter(categoryAdapter);
   }
 
   @Override public void showMessage(String message) {
-    Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-  }
-
-  @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-    presenter.onItemSelected(position);
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
   }
 
   private void initViews() {
@@ -99,5 +97,9 @@ public class MainActivity extends BaseActivity
       actionBar.setDisplayHomeAsUpEnabled(false);
       actionBar.setDisplayShowTitleEnabled(true);
     }
+  }
+
+  @Override public void onItemClick(Category category, int position) {
+    presenter.onItemSelected(category, position);
   }
 }

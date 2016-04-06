@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.ui.view;
+package gdg.androidtitlan.dagger2_demo.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

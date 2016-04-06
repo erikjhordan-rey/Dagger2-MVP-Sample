@@ -13,12 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo;
+package gdg.androidtitlan.dagger2_demo.di;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
+import android.app.Application;
+import android.content.Context;
 
-import javax.inject.Scope;
+public class App extends Application {
 
-@Scope @Retention(RetentionPolicy.RUNTIME) public @interface ActivityScope {
+  private AppComponent component;
+
+  @Override public void onCreate() {
+    super.onCreate();
+    setupGraph();
+  }
+
+  private void setupGraph() {
+    component = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+    component.inject(this);
+  }
+
+  public AppComponent component() {
+    return component;
+  }
+
+  public static App get(Context context) {
+    return (App) context.getApplicationContext();
+  }
 }

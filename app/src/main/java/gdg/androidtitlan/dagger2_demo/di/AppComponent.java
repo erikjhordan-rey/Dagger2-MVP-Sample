@@ -13,26 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.ui.main;
+package gdg.androidtitlan.dagger2_demo.di;
 
-import dagger.Module;
-import dagger.Provides;
+import javax.inject.Singleton;
+
+import dagger.Component;
+
 import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
+import gdg.androidtitlan.dagger2_demo.interactors.InteractorsModule;
 
-@Module public class MainModule {
+@Singleton @Component(
+    modules = {
+        AppModule.class, InteractorsModule.class
+    }) public interface AppComponent {
+  void inject(App app);
 
-  private MainView view;
-
-  public MainModule(MainView view) {
-    this.view = view;
-  }
-
-  @Provides public MainView provideView() {
-    return view;
-  }
-
-  @Provides
-  public MainPresenter providePresenter(MainView mainView, CategoryInteractor categoryInteractor) {
-    return new MainPresenterImpl(mainView, categoryInteractor);
-  }
+  CategoryInteractor getFindItemsInteractor();
 }

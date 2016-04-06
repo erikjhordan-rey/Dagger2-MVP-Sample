@@ -13,30 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo;
 
-import android.app.Application;
-import android.content.Context;
+package gdg.androidtitlan.dagger2_demo.model;
 
-public class App extends Application {
+public class Category {
 
-  private AppComponent component;
+  private String mName;
+  private int mIcon;
+  private int mBackgroundColor;
 
-  @Override public void onCreate() {
-    super.onCreate();
-    setupGraph();
+  public Category(String mName, int mIcon, int mBackgroundColor, int mPrimaryColor) {
+    this.mName = mName;
+    this.mIcon = mIcon;
+    this.mBackgroundColor = mBackgroundColor;
+    this.mPrimaryColor = mPrimaryColor;
   }
 
-  private void setupGraph() {
-    component = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-    component.inject(this);
+  private int mPrimaryColor;
+
+  public String getName() {
+    return mName;
   }
 
-  public AppComponent component() {
-    return component;
+  public int getIcon() {
+    return mIcon;
   }
 
-  public static App get(Context context) {
-    return (App) context.getApplicationContext();
+  public int getBackgroundColor() {
+    return mBackgroundColor;
+  }
+
+  public int getPrimaryColor() {
+    return mPrimaryColor;
   }
 }

@@ -16,8 +16,8 @@
 
 package gdg.androidtitlan.dagger2_demo.interactors;
 
-import gdg.androidtitlan.dagger2_demo.ui.main.CallBack;
+import gdg.androidtitlan.dagger2_demo.categories.Callback;
 
 public interface CategoryInteractor {
-  void findItems(CallBack listener);
+  void loadCategories(Callback listener);
 }

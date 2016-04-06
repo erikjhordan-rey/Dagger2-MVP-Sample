@@ -13,11 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.ui.main;
 
-public interface MainPresenter {
+package gdg.androidtitlan.dagger2_demo.categories;
 
-  void onResume();
+import gdg.androidtitlan.dagger2_demo.model.Category;
+import java.util.List;
 
-  void onItemSelected(int position);
+public interface MainView {
+
+  void showProgress();
+
+  void hideProgress();
+
+  void showCategories(List<Category> categories);
+
+  void showMessage(String message);
 }

@@ -13,21 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.categories;
 
-package gdg.androidtitlan.dagger2_demo.ui.common;
+import gdg.androidtitlan.dagger2_demo.model.Category;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+public interface MainPresenter {
 
-import gdg.androidtitlan.dagger2_demo.App;
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+  void onResume();
 
-public abstract class BaseActivity extends AppCompatActivity {
-
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
-  }
-
-  protected abstract void setupComponent(AppComponent appComponent);
+  void onItemSelected(Category category, int position);
 }
