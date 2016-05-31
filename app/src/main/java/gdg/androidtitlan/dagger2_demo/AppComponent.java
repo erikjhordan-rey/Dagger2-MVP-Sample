@@ -6,20 +6,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo;
 
-package gdg.androidtitlan.dagger2_demo.common;
+import dagger.Component;
+import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
+import gdg.androidtitlan.dagger2_demo.interactors.InteractorsModule;
+import javax.inject.Singleton;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import gdg.androidtitlan.dagger2_demo.App;
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+@Singleton @Component(
+    modules = {
+        AppModule.class, InteractorsModule.class
+    }) public interface AppComponent {
+  void inject(App app);
 
-public abstract class BaseActivity extends AppCompatActivity {
-
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
-  }
-
-  protected abstract void setupComponent(AppComponent appComponent);
+  CategoryInteractor getFindItemsInteractor();
 }

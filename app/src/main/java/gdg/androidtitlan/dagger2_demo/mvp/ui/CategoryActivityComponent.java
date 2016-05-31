@@ -7,19 +7,18 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.common;
+package gdg.androidtitlan.dagger2_demo.mvp.ui;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import gdg.androidtitlan.dagger2_demo.App;
+import dagger.Component;
 import gdg.androidtitlan.dagger2_demo.AppComponent;
+import gdg.androidtitlan.dagger2_demo.dagger.scope.ActivityScope;
+import gdg.androidtitlan.dagger2_demo.mvp.model.CategoryModule;
+import gdg.androidtitlan.dagger2_demo.mvp.presenter.CategoryPresenter;
 
-public abstract class BaseActivity extends AppCompatActivity {
+@ActivityScope @Component(
+    dependencies = AppComponent.class,
+    modules = CategoryModule.class) public interface CategoryActivityComponent {
+  void inject(CategoryActivity categoryActivity);
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
-  }
-
-  protected abstract void setupComponent(AppComponent appComponent);
+  CategoryPresenter getMainPresenter();
 }

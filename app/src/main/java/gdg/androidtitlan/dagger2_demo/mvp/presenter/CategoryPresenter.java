@@ -6,20 +6,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.mvp.presenter;
 
-package gdg.androidtitlan.dagger2_demo.common;
+import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import gdg.androidtitlan.dagger2_demo.App;
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+public interface CategoryPresenter {
 
-public abstract class BaseActivity extends AppCompatActivity {
+  void onResume();
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
-  }
-
-  protected abstract void setupComponent(AppComponent appComponent);
+  void onItemSelected(Category category, int position);
 }

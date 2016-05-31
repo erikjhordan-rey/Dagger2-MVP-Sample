@@ -15,4 +15,4 @@
   -->
 
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-        android:src="@drawable/icon_category_food_raster" />
+    android:src="@drawable/icon_category_food_raster"/>

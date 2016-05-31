@@ -1,20 +1,13 @@
 /**
- * Copyright 2015 Erik Jhordan Rey.
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Copyright 2015 Erik Jhordan Rey. <p/> Licensed under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance with the License. You may obtain a
+ * copy of the License at <p/> http://www.apache.org/licenses/LICENSE-2.0 <p/> Unless required by
+ * applicable law or agreed to in writing, software distributed under the License is distributed on
+ * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
+ * the License for the specific language governing permissions and limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.categories;
+package gdg.androidtitlan.dagger2_demo.adapter;
 
 import android.content.Context;
 import android.support.annotation.ColorRes;
@@ -25,14 +18,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import gdg.androidtitlan.dagger2_demo.model.Category;
-import java.util.Collections;
-import java.util.List;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import gdg.androidtitlan.dagger2_demo.R;
+import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
+import java.util.Collections;
+import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
@@ -77,30 +68,27 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     return categories.size();
   }
 
-  public static class CategoryViewHolder extends RecyclerView.ViewHolder {
-
-    @Bind(R.id.image_category_icon) ImageView imageView;
-
-    @Bind(R.id.label_category_name) TextView textView;
-
-    View itemView;
-
-    public CategoryViewHolder(View itemView) {
-      super(itemView);
-      ButterKnife.bind(this, itemView);
-      this.itemView = itemView;
-    }
-  }
-
   public void setCategories(List<Category> categories) {
     this.categories = categories;
+  }
+
+  public void setItemClickListener(ItemClickListener itemClickListener) {
+    this.itemClickListener = itemClickListener;
   }
 
   public interface ItemClickListener {
     void onItemClick(Category category, int position);
   }
 
-  public void setItemClickListener(ItemClickListener itemClickListener) {
-    this.itemClickListener = itemClickListener;
+  public static class CategoryViewHolder extends RecyclerView.ViewHolder {
+
+    @Bind(R.id.image_category_icon) ImageView imageView;
+
+    @Bind(R.id.label_category_name) TextView textView;
+
+    public CategoryViewHolder(View itemView) {
+      super(itemView);
+      ButterKnife.bind(this, itemView);
+    }
   }
 }

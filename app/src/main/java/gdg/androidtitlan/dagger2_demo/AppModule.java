@@ -6,20 +6,22 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See
  * the License for the specific language governing permissions and limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo;
 
-package gdg.androidtitlan.dagger2_demo.common;
+import android.app.Application;
+import dagger.Module;
+import dagger.Provides;
+import javax.inject.Singleton;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import gdg.androidtitlan.dagger2_demo.App;
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+@Module public class AppModule {
 
-public abstract class BaseActivity extends AppCompatActivity {
+  private App app;
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
+  public AppModule(App app) {
+    this.app = app;
   }
 
-  protected abstract void setupComponent(AppComponent appComponent);
+  @Provides @Singleton public Application provideApplication() {
+    return app;
+  }
 }
