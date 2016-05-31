@@ -22,8 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gdg.androidtitlan.dagger2_demo.R;
-import gdg.androidtitlan.dagger2_demo.categories.Callback;
-import gdg.androidtitlan.dagger2_demo.model.Category;
+import gdg.androidtitlan.dagger2_demo.callback.Callback;
+import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 
 public class CategoryInteractorImpl implements CategoryInteractor {
 

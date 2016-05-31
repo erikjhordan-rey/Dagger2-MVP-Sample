@@ -13,24 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.di;
+package gdg.androidtitlan.dagger2_demo;
 
 import android.app.Application;
+import android.content.Context;
 
-import javax.inject.Singleton;
+import gdg.androidtitlan.dagger2_demo.daggerModel.AppModule;
 
-import dagger.Module;
-import dagger.Provides;
+public class App extends Application {
 
-@Module public class AppModule {
+    private AppComponent component;
 
-  private App app;
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        setupGraph();
+    }
 
-  public AppModule(App app) {
-    this.app = app;
-  }
+    private void setupGraph() {
+        component = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+        component.inject(this);
+    }
 
-  @Provides @Singleton public Application provideApplication() {
-    return app;
-  }
+    public AppComponent component() {
+        return component;
+    }
+
+    public static App get(Context context) {
+        return (App) context.getApplicationContext();
+    }
 }

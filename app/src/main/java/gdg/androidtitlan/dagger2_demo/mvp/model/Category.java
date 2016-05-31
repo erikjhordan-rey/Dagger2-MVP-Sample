@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.model;
+package gdg.androidtitlan.dagger2_demo.mvp.model;
 
 public class Category {
 

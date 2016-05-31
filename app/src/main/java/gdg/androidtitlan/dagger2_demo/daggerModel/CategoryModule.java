@@ -13,26 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.categories;
+package gdg.androidtitlan.dagger2_demo.daggerModel;
 
 import dagger.Module;
 import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.mvp.ui.CategoryView;
 import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
+import gdg.androidtitlan.dagger2_demo.mvp.presenter.CategoryPresenter;
+import gdg.androidtitlan.dagger2_demo.mvp.presenter.impl.CategoryPresenterImpl;
 
-@Module public class MainModule {
+@Module
+public class CategoryModule {
 
-  private MainView view;
+    private CategoryView view;
 
-  public MainModule(MainView view) {
-    this.view = view;
-  }
+    public CategoryModule(CategoryView view) {
+        this.view = view;
+    }
 
-  @Provides public MainView provideView() {
-    return view;
-  }
+    @Provides
+    public CategoryView provideView() {
+        return view;
+    }
 
-  @Provides
-  public MainPresenter providePresenter(MainView mainView, CategoryInteractor categoryInteractor) {
-    return new MainPresenterImpl(mainView, categoryInteractor);
-  }
+    @Provides
+    public CategoryPresenter providePresenter(CategoryView categoryView, CategoryInteractor categoryInteractor) {
+        return new CategoryPresenterImpl(categoryView, categoryInteractor);
+    }
 }

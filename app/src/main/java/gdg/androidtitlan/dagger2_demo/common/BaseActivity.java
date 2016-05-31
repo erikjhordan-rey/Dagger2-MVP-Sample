@@ -19,8 +19,8 @@ package gdg.androidtitlan.dagger2_demo.common;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import gdg.androidtitlan.dagger2_demo.di.App;
-import gdg.androidtitlan.dagger2_demo.di.AppComponent;
+import gdg.androidtitlan.dagger2_demo.App;
+import gdg.androidtitlan.dagger2_demo.AppComponent;
 
 public abstract class BaseActivity extends AppCompatActivity {
 

@@ -13,17 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.daggerModel;
 
-package gdg.androidtitlan.dagger2_demo.categories;
+import android.app.Application;
 
-import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.di.ActivityScope;
-import gdg.androidtitlan.dagger2_demo.di.AppComponent;
+import javax.inject.Singleton;
 
-@ActivityScope @Component(
-    dependencies = AppComponent.class,
-    modules = MainModule.class) public interface MainComponent {
-  void inject(CategoryActivity categoryActivity);
+import dagger.Module;
+import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.App;
 
-  MainPresenter getMainPresenter();
+@Module
+public class AppModule {
+
+    private App app;
+
+    public AppModule(App app) {
+        this.app = app;
+    }
+
+    @Provides
+    @Singleton
+    public Application provideApplication() {
+        return app;
+    }
 }

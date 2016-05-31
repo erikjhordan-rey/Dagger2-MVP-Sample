@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.daggerModel;
 
-package gdg.androidtitlan.dagger2_demo.categories;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
-import gdg.androidtitlan.dagger2_demo.model.Category;
-import java.util.List;
+import javax.inject.Scope;
 
-public interface Callback {
-    void onLoadCategories(List<Category> categories);
+@Scope @Retention(RetentionPolicy.RUNTIME) public @interface ActivityScope {
 }

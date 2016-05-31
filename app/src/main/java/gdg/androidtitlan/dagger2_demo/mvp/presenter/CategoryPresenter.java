@@ -13,20 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.di;
+package gdg.androidtitlan.dagger2_demo.mvp.presenter;
 
-import javax.inject.Singleton;
+import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 
-import dagger.Component;
+public interface CategoryPresenter {
 
-import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
-import gdg.androidtitlan.dagger2_demo.interactors.InteractorsModule;
+  void onResume();
 
-@Singleton @Component(
-    modules = {
-        AppModule.class, InteractorsModule.class
-    }) public interface AppComponent {
-  void inject(App app);
-
-  CategoryInteractor getFindItemsInteractor();
+  void onItemSelected(Category category, int position);
 }

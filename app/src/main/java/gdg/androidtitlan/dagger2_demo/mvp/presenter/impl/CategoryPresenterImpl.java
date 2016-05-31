@@ -14,19 +14,22 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.categories;
+package gdg.androidtitlan.dagger2_demo.mvp.presenter.impl;
 
-import gdg.androidtitlan.dagger2_demo.model.Category;
 import java.util.List;
 
+import gdg.androidtitlan.dagger2_demo.callback.Callback;
+import gdg.androidtitlan.dagger2_demo.mvp.ui.CategoryView;
 import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
+import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
+import gdg.androidtitlan.dagger2_demo.mvp.presenter.CategoryPresenter;
 
-public class MainPresenterImpl implements MainPresenter, Callback {
+public class CategoryPresenterImpl implements CategoryPresenter, Callback {
 
-  private MainView mainView;
+  private CategoryView mainView;
   private CategoryInteractor categoryInteractor;
 
-  public MainPresenterImpl(MainView mainView, CategoryInteractor categoryInteractor) {
+  public CategoryPresenterImpl(CategoryView mainView, CategoryInteractor categoryInteractor) {
     this.mainView = mainView;
     this.categoryInteractor = categoryInteractor;
   }

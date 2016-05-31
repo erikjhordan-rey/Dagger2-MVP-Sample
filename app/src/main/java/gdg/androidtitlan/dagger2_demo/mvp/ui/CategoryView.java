@@ -13,30 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.di;
 
-import android.app.Application;
-import android.content.Context;
+package gdg.androidtitlan.dagger2_demo.mvp.ui;
 
-public class App extends Application {
+import java.util.List;
 
-  private AppComponent component;
+import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 
-  @Override public void onCreate() {
-    super.onCreate();
-    setupGraph();
-  }
+public interface CategoryView {
 
-  private void setupGraph() {
-    component = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-    component.inject(this);
-  }
+  void showProgress();
 
-  public AppComponent component() {
-    return component;
-  }
+  void hideProgress();
 
-  public static App get(Context context) {
-    return (App) context.getApplicationContext();
-  }
+  void showCategories(List<Category> categories);
+
+  void showMessage(String message);
 }
