@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.daggerModel;
+package gdg.androidtitlan.dagger2_demo.mvp.model;
 
 import dagger.Module;
 import dagger.Provides;

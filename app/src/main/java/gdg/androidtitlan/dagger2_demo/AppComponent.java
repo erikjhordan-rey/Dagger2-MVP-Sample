@@ -18,9 +18,8 @@ package gdg.androidtitlan.dagger2_demo;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.dagger.module.AppModule;
 import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
-import gdg.androidtitlan.dagger2_demo.dagger.module.InteractorsModule;
+import gdg.androidtitlan.dagger2_demo.interactors.InteractorsModule;
 
 @Singleton
 @Component(

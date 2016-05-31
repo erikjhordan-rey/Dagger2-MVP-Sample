@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package gdg.androidtitlan.dagger2_demo.dagger.module;
+package gdg.androidtitlan.dagger2_demo;
 
 import android.app.Application;
 
@@ -21,7 +21,6 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import gdg.androidtitlan.dagger2_demo.App;
 
 @Module
 public class AppModule {

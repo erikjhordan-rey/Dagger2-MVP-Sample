@@ -89,12 +89,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         @Bind(R.id.label_category_name)
         TextView textView;
 
-        View itemView;
 
         public CategoryViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-            this.itemView = itemView;
         }
     }
 

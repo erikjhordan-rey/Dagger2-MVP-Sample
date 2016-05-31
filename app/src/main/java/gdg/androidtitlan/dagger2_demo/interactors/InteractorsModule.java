@@ -18,10 +18,13 @@ package gdg.androidtitlan.dagger2_demo.interactors;
 
 import dagger.Module;
 import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.interactors.impl.CategoryInteractorImpl;
 
-@Module public class InteractorsModule {
+@Module
+public class InteractorsModule {
 
-  @Provides public CategoryInteractor provideFindItemsInteractor() {
-    return new CategoryInteractorImpl();
-  }
+    @Provides
+    public CategoryInteractor provideFindItemsInteractor() {
+        return new CategoryInteractorImpl();
+    }
 }

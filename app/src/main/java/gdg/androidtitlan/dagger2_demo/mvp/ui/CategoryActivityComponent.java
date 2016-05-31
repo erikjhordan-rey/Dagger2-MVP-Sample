@@ -17,7 +17,7 @@
 package gdg.androidtitlan.dagger2_demo.mvp.ui;
 
 import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.dagger.module.CategoryModule;
+import gdg.androidtitlan.dagger2_demo.mvp.model.CategoryModule;
 import gdg.androidtitlan.dagger2_demo.dagger.scope.ActivityScope;
 import gdg.androidtitlan.dagger2_demo.AppComponent;
 import gdg.androidtitlan.dagger2_demo.mvp.presenter.CategoryPresenter;

@@ -18,8 +18,6 @@ package gdg.androidtitlan.dagger2_demo;
 import android.app.Application;
 import android.content.Context;
 
-import gdg.androidtitlan.dagger2_demo.dagger.module.AppModule;
-
 public class App extends Application {
 
     private AppComponent component;
