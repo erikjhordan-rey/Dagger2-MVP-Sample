@@ -13,20 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.dagger.scope;
 
-package gdg.androidtitlan.dagger2_demo.mvp.ui;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
-import java.util.List;
+import javax.inject.Scope;
 
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
-
-public interface CategoryView {
-
-    void showProgress();
-
-    void hideProgress();
-
-    void showCategories(List<Category> categories);
-
-    void showMessage(String message);
+@Scope
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ActivityScope {
 }

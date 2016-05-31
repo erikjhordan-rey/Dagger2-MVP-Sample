@@ -18,32 +18,32 @@ package gdg.androidtitlan.dagger2_demo.mvp.model;
 
 public class Category {
 
-  private String mName;
-  private int mIcon;
-  private int mBackgroundColor;
+    private String mName;
+    private int mIcon;
+    private int mBackgroundColor;
 
-  public Category(String mName, int mIcon, int mBackgroundColor, int mPrimaryColor) {
-    this.mName = mName;
-    this.mIcon = mIcon;
-    this.mBackgroundColor = mBackgroundColor;
-    this.mPrimaryColor = mPrimaryColor;
-  }
+    public Category(String mName, int mIcon, int mBackgroundColor, int mPrimaryColor) {
+        this.mName = mName;
+        this.mIcon = mIcon;
+        this.mBackgroundColor = mBackgroundColor;
+        this.mPrimaryColor = mPrimaryColor;
+    }
 
-  private int mPrimaryColor;
+    private int mPrimaryColor;
 
-  public String getName() {
-    return mName;
-  }
+    public String getName() {
+        return mName;
+    }
 
-  public int getIcon() {
-    return mIcon;
-  }
+    public int getIcon() {
+        return mIcon;
+    }
 
-  public int getBackgroundColor() {
-    return mBackgroundColor;
-  }
+    public int getBackgroundColor() {
+        return mBackgroundColor;
+    }
 
-  public int getPrimaryColor() {
-    return mPrimaryColor;
-  }
+    public int getPrimaryColor() {
+        return mPrimaryColor;
+    }
 }

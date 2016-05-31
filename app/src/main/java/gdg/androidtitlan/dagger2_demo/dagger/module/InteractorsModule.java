@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.mvp.ui;
+package gdg.androidtitlan.dagger2_demo.dagger.module;
 
-import java.util.List;
+import dagger.Module;
+import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
+import gdg.androidtitlan.dagger2_demo.interactors.impl.CategoryInteractorImpl;
 
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
+@Module
+public class InteractorsModule {
 
-public interface CategoryView {
-
-    void showProgress();
-
-    void hideProgress();
-
-    void showCategories(List<Category> categories);
-
-    void showMessage(String message);
+    @Provides
+    public CategoryInteractor provideFindItemsInteractor() {
+        return new CategoryInteractorImpl();
+    }
 }

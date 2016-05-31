@@ -26,25 +26,28 @@ import gdg.androidtitlan.dagger2_demo.mvp.presenter.CategoryPresenter;
 
 public class CategoryPresenterImpl implements CategoryPresenter, Callback {
 
-  private CategoryView mainView;
-  private CategoryInteractor categoryInteractor;
+    private CategoryView mainView;
+    private CategoryInteractor categoryInteractor;
 
-  public CategoryPresenterImpl(CategoryView mainView, CategoryInteractor categoryInteractor) {
-    this.mainView = mainView;
-    this.categoryInteractor = categoryInteractor;
-  }
+    public CategoryPresenterImpl(CategoryView mainView, CategoryInteractor categoryInteractor) {
+        this.mainView = mainView;
+        this.categoryInteractor = categoryInteractor;
+    }
 
-  @Override public void onResume() {
-    mainView.showProgress();
-    categoryInteractor.loadCategories(this);
-  }
+    @Override
+    public void onResume() {
+        mainView.showProgress();
+        categoryInteractor.loadCategories(this);
+    }
 
-  @Override public void onItemSelected(Category category, int position) {
-    mainView.showMessage(String.format(category.getName() +" ->" +" Position %d clicked", position));
-  }
+    @Override
+    public void onItemSelected(Category category, int position) {
+        mainView.showMessage(String.format(category.getName() + " ->" + " Position %d clicked", position));
+    }
 
-  @Override public void onLoadCategories(List<Category> categories) {
-    mainView.showCategories(categories);
-    mainView.hideProgress();
-  }
+    @Override
+    public void onLoadCategories(List<Category> categories) {
+        mainView.showCategories(categories);
+        mainView.hideProgress();
+    }
 }

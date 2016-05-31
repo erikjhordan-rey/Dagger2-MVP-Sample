@@ -19,7 +19,7 @@ import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 
 public interface CategoryPresenter {
 
-  void onResume();
+    void onResume();
 
-  void onItemSelected(Category category, int position);
+    void onItemSelected(Category category, int position);
 }

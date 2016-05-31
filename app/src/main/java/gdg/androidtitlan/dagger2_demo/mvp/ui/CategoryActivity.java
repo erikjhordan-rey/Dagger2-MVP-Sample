@@ -29,7 +29,7 @@ import javax.inject.Inject;
 
 import gdg.androidtitlan.dagger2_demo.R;
 import gdg.androidtitlan.dagger2_demo.adapter.CategoryAdapter;
-import gdg.androidtitlan.dagger2_demo.daggerModel.CategoryModule;
+import gdg.androidtitlan.dagger2_demo.dagger.module.CategoryModule;
 import gdg.androidtitlan.dagger2_demo.common.BaseActivity;
 import gdg.androidtitlan.dagger2_demo.AppComponent;
 import gdg.androidtitlan.dagger2_demo.mvp.model.Category;

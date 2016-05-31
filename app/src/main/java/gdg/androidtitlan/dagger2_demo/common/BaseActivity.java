@@ -24,10 +24,11 @@ import gdg.androidtitlan.dagger2_demo.AppComponent;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
-  }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setupComponent((AppComponent) App.get(this).component());
+    }
 
-  protected abstract void setupComponent(AppComponent appComponent);
+    protected abstract void setupComponent(AppComponent appComponent);
 }

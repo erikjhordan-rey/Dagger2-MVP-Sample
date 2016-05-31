@@ -1,5 +1,4 @@
-<FrameLayout
-    android:id="@+id/category_item"
+<FrameLayout android:id="@+id/category_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/size_avatar_toolbar"
         android:contentDescription="@string/category"
-        android:src="@drawable/icon_category_entertainment_raster"/>
+        android:src="@drawable/icon_category_entertainment_raster" />
 
     <TextView
         android:id="@+id/label_category_name"
@@ -22,6 +21,6 @@
         android:background="@color/colorPrimaryDark"
         android:padding="@dimen/spacing_double"
         android:text="@string/category"
-        android:textSize="14sp"/>
+        android:textSize="14sp" />
 
 </FrameLayout>

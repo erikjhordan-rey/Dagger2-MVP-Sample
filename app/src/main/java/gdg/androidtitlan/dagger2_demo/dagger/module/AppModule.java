@@ -13,20 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package gdg.androidtitlan.dagger2_demo.dagger.module;
 
-package gdg.androidtitlan.dagger2_demo.mvp.ui;
+import android.app.Application;
 
-import java.util.List;
+import javax.inject.Singleton;
 
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
+import dagger.Module;
+import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.App;
 
-public interface CategoryView {
+@Module
+public class AppModule {
 
-    void showProgress();
+    private App app;
 
-    void hideProgress();
+    public AppModule(App app) {
+        this.app = app;
+    }
 
-    void showCategories(List<Category> categories);
-
-    void showMessage(String message);
+    @Provides
+    @Singleton
+    public Application provideApplication() {
+        return app;
+    }
 }
