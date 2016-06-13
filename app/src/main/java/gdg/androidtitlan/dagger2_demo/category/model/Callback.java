@@ -14,18 +14,10 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.mvp.ui;
+package gdg.androidtitlan.dagger2_demo.category.model;
 
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 import java.util.List;
 
-public interface CategoryView {
-
-  void showProgress();
-
-  void hideProgress();
-
-  void showCategories(List<Category> categories);
-
-  void showMessage(String message);
+public interface Callback {
+  void onLoadCategories(List<Category> categories);
 }

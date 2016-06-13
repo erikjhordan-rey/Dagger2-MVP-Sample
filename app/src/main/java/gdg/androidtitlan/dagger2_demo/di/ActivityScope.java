@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.interactors;
+package gdg.androidtitlan.dagger2_demo.di;
 
-import gdg.androidtitlan.dagger2_demo.callback.Callback;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import javax.inject.Scope;
 
-public interface CategoryInteractor {
-  void loadCategories(Callback listener);
+@Scope @Retention(RetentionPolicy.RUNTIME) public @interface ActivityScope {
 }

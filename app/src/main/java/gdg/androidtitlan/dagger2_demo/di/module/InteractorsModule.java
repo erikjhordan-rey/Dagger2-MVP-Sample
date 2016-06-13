@@ -7,15 +7,15 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.interactors;
+package gdg.androidtitlan.dagger2_demo.di.module;
 
 import dagger.Module;
 import dagger.Provides;
-import gdg.androidtitlan.dagger2_demo.interactors.impl.CategoryInteractorImpl;
+import gdg.androidtitlan.dagger2_demo.category.model.Categories;
 
 @Module public class InteractorsModule {
 
-  @Provides public CategoryInteractor provideFindItemsInteractor() {
-    return new CategoryInteractorImpl();
+  @Provides public Categories provideFindItemsInteractor() {
+    return new Categories();
   }
 }

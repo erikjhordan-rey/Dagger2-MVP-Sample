@@ -20,7 +20,7 @@
       android:layout_height="match_parent"
       >
 
-    <gdg.androidtitlan.dagger2_demo.view.ResponsiveRecyclerView
+    <gdg.androidtitlan.dagger2_demo.widget.ResponsiveRecyclerView
         android:id="@+id/rv_categorys"
         style="@style/AppTheme.RecyclerView"
         />

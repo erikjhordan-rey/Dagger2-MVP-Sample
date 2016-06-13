@@ -3,14 +3,15 @@
     package="gdg.androidtitlan.dagger2_demo">
 
   <application
-      android:name=".App"
+      android:name=".CategoryApplication"
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
+
     <activity
-        android:name=".mvp.ui.CategoryActivity"
+        android:name=".category.view.activity.CategoryActivity"
         android:label="@string/app_name">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>

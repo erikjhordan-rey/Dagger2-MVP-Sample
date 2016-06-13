@@ -14,19 +14,16 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.interactors.impl;
+package gdg.androidtitlan.dagger2_demo.category.model;
 
 import android.os.Handler;
 import gdg.androidtitlan.dagger2_demo.R;
-import gdg.androidtitlan.dagger2_demo.callback.Callback;
-import gdg.androidtitlan.dagger2_demo.interactors.CategoryInteractor;
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryInteractorImpl implements CategoryInteractor {
+public class Categories {
 
-  @Override public void loadCategories(final Callback callback) {
+  public void getCategories(final Callback callback) {
     final int DELEAY_MILLIS = 2000;
     new Handler().postDelayed(new Runnable() {
       @Override public void run() {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.adapter;
+package gdg.androidtitlan.dagger2_demo.category.adapter;
 
 import android.content.Context;
 import android.support.annotation.ColorRes;
@@ -28,7 +28,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import gdg.androidtitlan.dagger2_demo.R;
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
+import gdg.androidtitlan.dagger2_demo.category.model.Category;
 import java.util.Collections;
 import java.util.List;
 

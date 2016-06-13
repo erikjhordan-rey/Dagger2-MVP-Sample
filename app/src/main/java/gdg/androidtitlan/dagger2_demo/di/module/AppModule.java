@@ -14,13 +14,23 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.mvp.presenter;
+package gdg.androidtitlan.dagger2_demo.di.module;
 
-import gdg.androidtitlan.dagger2_demo.mvp.model.Category;
+import android.app.Application;
+import dagger.Module;
+import dagger.Provides;
+import gdg.androidtitlan.dagger2_demo.CategoryApplication;
+import javax.inject.Singleton;
 
-public interface CategoryPresenter {
+@Module public class AppModule {
 
-  void onResume();
+  private CategoryApplication categoryApplication;
 
-  void onItemSelected(Category category, int position);
+  public AppModule(CategoryApplication categoryApplication) {
+    this.categoryApplication = categoryApplication;
+  }
+
+  @Provides @Singleton public Application provideApplication() {
+    return categoryApplication;
+  }
 }

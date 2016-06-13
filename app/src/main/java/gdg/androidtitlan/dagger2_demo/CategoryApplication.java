@@ -18,14 +18,16 @@ package gdg.androidtitlan.dagger2_demo;
 
 import android.app.Application;
 import android.content.Context;
+import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
+import gdg.androidtitlan.dagger2_demo.di.component.DaggerAppComponent;
+import gdg.androidtitlan.dagger2_demo.di.module.AppModule;
 
-
-public class App extends Application {
+public class CategoryApplication extends Application {
 
   private AppComponent component;
 
-  public static App get(Context context) {
-    return (App) context.getApplicationContext();
+  public static CategoryApplication get(Context context) {
+    return (CategoryApplication) context.getApplicationContext();
   }
 
   @Override public void onCreate() {

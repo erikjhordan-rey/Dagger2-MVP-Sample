@@ -18,14 +18,14 @@ package gdg.androidtitlan.dagger2_demo.common;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import gdg.androidtitlan.dagger2_demo.App;
-import gdg.androidtitlan.dagger2_demo.AppComponent;
+import gdg.androidtitlan.dagger2_demo.CategoryApplication;
+import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) App.get(this).component());
+    setupComponent((AppComponent) CategoryApplication.get(this).component());
   }
 
   protected abstract void setupComponent(AppComponent appComponent);
