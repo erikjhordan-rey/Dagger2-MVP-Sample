@@ -9,6 +9,10 @@ Inspired in googlesamples / [android-topeka](https://github.com/googlesamples/an
 
 ![](./art/2015-12-15.png)
 
+## DAGGER 2 Kata
+
+MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2. [Learn Dagger 2]
+(https://github.com/erikcaffrey/Kata-Dagger2-MarioKart)
 
 Developed By
 ------------
