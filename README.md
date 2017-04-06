@@ -1,4 +1,4 @@
-# Dagger2-MVP-Sample
+# Dagger2-MVP-Sample [![Build Status](https://travis-ci.org/erikcaffrey/Dagger2-MVP-Sample.svg?branch=master)](https://travis-ci.org/erikcaffrey/Dagger2-MVP-Sample)
 
 Example Dagger 2 using MVP pattern to show how to use this library and pattern in our android applications.
 
