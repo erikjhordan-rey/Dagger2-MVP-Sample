@@ -32,7 +32,6 @@ import gdg.androidtitlan.dagger2_demo.common.BaseActivity;
 import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
 import gdg.androidtitlan.dagger2_demo.di.component.DaggerCategoryComponent;
 import gdg.androidtitlan.dagger2_demo.di.module.CategoryModule;
-
 import java.util.List;
 import javax.inject.Inject;
 

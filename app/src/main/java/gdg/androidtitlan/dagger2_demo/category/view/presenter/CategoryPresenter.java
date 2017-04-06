@@ -17,8 +17,8 @@
 package gdg.androidtitlan.dagger2_demo.category.view.presenter;
 
 import gdg.androidtitlan.dagger2_demo.category.model.Callback;
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
 import gdg.androidtitlan.dagger2_demo.category.model.Categories;
+import gdg.androidtitlan.dagger2_demo.category.model.Category;
 import java.util.List;
 
 public class CategoryPresenter implements Presenter, Callback {
