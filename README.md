@@ -1,23 +1,38 @@
 # Dagger2-MVP-Sample
 
-Simple List example to show how Dagger2 works.
+Example Dagger 2 using MVP pattern to show how to use this library and pattern in our android applications.
 
 Inspired in googlesamples / [android-topeka](https://github.com/googlesamples/android-topeka)
 
+## Do you want to learn Dagger2 ?  
 
-## Screenshot
+MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2. 
+
+* [Source Code - MarioKart Kata Dagger 2](https://github.com/erikcaffrey/Kata-Dagger2-MarioKart)
+* [BlogPost - MarioKart Kata Dagger 2](https://erikcaffrey.github.io/ANDROID-kata-dagger2/) (spanish)
+
+
+Libraries used on the sample project
+------------------------------------
+* [ButterKnife][1]
+* [Dagger 2][2]
+
+
+## Demo
 
 ![](./art/2015-12-15.png)
 
-## DAGGER 2 Kata
 
-MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2. [Learn Dagger 2]
-(https://github.com/erikcaffrey/Kata-Dagger2-MarioKart)
+Do you want to contribute?
+--------------------------
+
+Feel free to report or add any useful feature, I will be glad to improve it with your help, before submitting your code please check the [codestyle](https://github.com/square/java-code-styles).
+
 
 Developed By
 ------------
 
-* Erik González  - <erikcaffrey10@gmail.com>
+* Erik Jhordan Rey  - <erikcaffrey10@gmail.com> or <erik.gonzalez@schibsted.com.mx>
 
 
 Do you want to contribute?
@@ -42,3 +57,6 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
+
+[1]: https://github.com/JakeWharton/butterknife
+[2]: https://github.com/google/dagger

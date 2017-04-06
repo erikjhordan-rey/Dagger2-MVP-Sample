@@ -25,7 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import gdg.androidtitlan.dagger2_demo.R;
 import gdg.androidtitlan.dagger2_demo.category.model.Category;
@@ -89,9 +89,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
   public static class CategoryViewHolder extends RecyclerView.ViewHolder {
 
-    @Bind(R.id.image_category_icon) ImageView imageView;
+    @BindView(R.id.image_category_icon) ImageView imageView;
 
-    @Bind(R.id.label_category_name) TextView textView;
+    @BindView(R.id.label_category_name) TextView textView;
 
     public CategoryViewHolder(View itemView) {
       super(itemView);
