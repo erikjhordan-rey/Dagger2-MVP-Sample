@@ -19,8 +19,8 @@ package gdg.androidtitlan.dagger2_demo.di.module;
 import dagger.Module;
 import dagger.Provides;
 import gdg.androidtitlan.dagger2_demo.category.model.Categories;
-import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
 import gdg.androidtitlan.dagger2_demo.category.view.presenter.CategoryPresenter;
+import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
 
 @Module public class CategoryModule {
 
@@ -34,8 +34,8 @@ import gdg.androidtitlan.dagger2_demo.category.view.presenter.CategoryPresenter;
     return view;
   }
 
-  @Provides public Presenter providePresenter(CategoryPresenter.View categoryView,
-      Categories categories) {
+  @Provides
+  public Presenter providePresenter(CategoryPresenter.View categoryView, Categories categories) {
     return new CategoryPresenter(categoryView, categories);
   }
 }
