@@ -25,11 +25,7 @@ public class Categories {
 
   public void getCategories(final Callback callback) {
     final int DELEAY_MILLIS = 2000;
-    new Handler().postDelayed(new Runnable() {
-      @Override public void run() {
-        callback.onLoadCategories(createArrayList());
-      }
-    }, DELEAY_MILLIS);
+    new Handler().postDelayed(() -> callback.onLoadCategories(createArrayList()), DELEAY_MILLIS);
   }
 
   private List<Category> createArrayList() {

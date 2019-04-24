@@ -17,7 +17,9 @@
 package gdg.androidtitlan.dagger2_demo.common;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import gdg.androidtitlan.dagger2_demo.CategoryApplication;
 import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
 

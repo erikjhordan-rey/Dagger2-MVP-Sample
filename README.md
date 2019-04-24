@@ -1,4 +1,4 @@
-# Dagger2-MVP-Sample [![Build Status](https://travis-ci.org/erikcaffrey/Dagger2-MVP-Sample.svg?branch=master)](https://travis-ci.org/erikcaffrey/Dagger2-MVP-Sample)
+# Dagger2-MVP-Sample [![Build Status](https://travis-ci.org/erikjhordan-rey/Dagger2-MVP-Sample.svg?branch=master)](https://travis-ci.org/erikjhordan-rey/Dagger2-MVP-Sample)
 
 Example Dagger 2 using MVP pattern to show how to use this library and pattern in our android applications.
 
@@ -8,8 +8,8 @@ Inspired in googlesamples / [android-topeka](https://github.com/googlesamples/an
 
 MarioKart Kata for Android Developers The main goal is to practice Dependency injection using Dagger 2. 
 
-* [Source Code - MarioKart Kata Dagger 2](https://github.com/erikcaffrey/Kata-Dagger2-MarioKart)
-* [BlogPost - MarioKart Kata Dagger 2](https://erikcaffrey.github.io/ANDROID-kata-dagger2/) (spanish)
+* [Source Code - MarioKart Kata Dagger 2](https://github.com/erikjhordan-rey/Kata-Dagger2-MarioKart)
+* [BlogPost - MarioKart Kata Dagger 2](https://erikjhordan-rey.github.io/blog/2016/07/07/ANDROID-kata-dagger2.html) (spanish)
 
 
 Libraries used on the sample project
@@ -32,7 +32,7 @@ Feel free to report or add any useful feature, I will be glad to improve it with
 Developed By
 ------------
 
-* Erik Jhordan Rey  - <erikjhordan.rey@gmail.com> or <erik.gonzalez@schibsted.com.mx>
+* Erik Jhordan Rey  - <erikjhordan.rey@gmail.com>
 
 
 Do you want to contribute?

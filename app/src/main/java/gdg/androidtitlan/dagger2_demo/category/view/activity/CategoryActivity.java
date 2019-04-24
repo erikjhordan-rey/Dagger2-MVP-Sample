@@ -17,12 +17,18 @@
 package gdg.androidtitlan.dagger2_demo.category.view.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
 import gdg.androidtitlan.dagger2_demo.R;
 import gdg.androidtitlan.dagger2_demo.category.adapter.CategoryAdapter;
 import gdg.androidtitlan.dagger2_demo.category.model.Category;
@@ -32,8 +38,6 @@ import gdg.androidtitlan.dagger2_demo.common.BaseActivity;
 import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
 import gdg.androidtitlan.dagger2_demo.di.component.DaggerCategoryComponent;
 import gdg.androidtitlan.dagger2_demo.di.module.CategoryModule;
-import java.util.List;
-import javax.inject.Inject;
 
 public class CategoryActivity extends BaseActivity
     implements CategoryPresenter.View, CategoryAdapter.ItemClickListener {

@@ -23,7 +23,7 @@ public class Category {
   private int mBackgroundColor;
   private int mPrimaryColor;
 
-  public Category(String mName, int mIcon, int mBackgroundColor, int mPrimaryColor) {
+  Category(String mName, int mIcon, int mBackgroundColor, int mPrimaryColor) {
     this.mName = mName;
     this.mIcon = mIcon;
     this.mBackgroundColor = mBackgroundColor;
