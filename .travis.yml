@@ -1,4 +1,5 @@
 language: android
+dist: trusty
 jdk: oraclejdk8
 
 env:
@@ -17,9 +18,9 @@ android:
      - extra-android-m2repository
 
 licenses:
-    - 'android-sdk-preview-license-.+'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
+    - 'android-sdk-preview-license-.+'
 
 script:
   - ./gradlew checkstyle assemble
