@@ -23,36 +23,39 @@ import java.util.List;
 
 public class CategoryPresenter implements Presenter, Callback {
 
-  private View view;
-  private Categories categories;
+    private View view;
+    private Categories categories;
 
-  public CategoryPresenter(View view, Categories categories) {
-    this.view = view;
-    this.categories = categories;
-  }
+    public CategoryPresenter(View view, Categories categories) {
+        this.view = view;
+        this.categories = categories;
+    }
 
-  @Override public void onResume() {
-    view.showProgress();
-    categories.getCategories(this);
-  }
+    @Override
+    public void onResume() {
+        view.showProgress();
+        categories.getCategories(this);
+    }
 
-  @Override public void onItemSelected(Category category, int position) {
-    view.showMessage(String.format(category.getName() + " ->" + " Position %d clicked", position));
-  }
+    @Override
+    public void onItemSelected(Category category, int position) {
+        view.showMessage(String.format(category.getName() + " ->" + " Position %d clicked", position));
+    }
 
-  @Override public void onLoadCategories(List<Category> categories) {
-    view.showCategories(categories);
-    view.hideProgress();
-  }
+    @Override
+    public void onLoadCategories(List<Category> categories) {
+        view.showCategories(categories);
+        view.hideProgress();
+    }
 
-  public interface View {
+    public interface View {
 
-    void showProgress();
+        void showProgress();
 
-    void hideProgress();
+        void hideProgress();
 
-    void showCategories(List<Category> categories);
+        void showCategories(List<Category> categories);
 
-    void showMessage(String message);
-  }
+        void showMessage(String message);
+    }
 }

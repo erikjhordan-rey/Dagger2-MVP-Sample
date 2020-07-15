@@ -37,7 +37,6 @@ public class CategoryApplication extends Application {
 
     private void setupGraph() {
         component = DaggerAppComponent.builder().build();
-        component.inject(this);
     }
 
     public AppComponent component() {

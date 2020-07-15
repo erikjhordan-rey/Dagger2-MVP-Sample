@@ -17,16 +17,13 @@
 package gdg.androidtitlan.dagger2_demo.di.component;
 
 import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.CategoryApplication;
 import gdg.androidtitlan.dagger2_demo.category.model.Categories;
-import gdg.androidtitlan.dagger2_demo.di.module.AppModule;
 import gdg.androidtitlan.dagger2_demo.di.module.InteractorsModule;
 import javax.inject.Singleton;
 
 @Singleton
-@Component(modules = {AppModule.class, InteractorsModule.class})
+@Component(modules = {InteractorsModule.class})
 public interface AppComponent {
-    void inject(CategoryApplication categoryApplication);
 
     Categories getFindItemsInteractor();
 }

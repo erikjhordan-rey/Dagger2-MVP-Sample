@@ -13,10 +13,11 @@ import dagger.Module;
 import dagger.Provides;
 import gdg.androidtitlan.dagger2_demo.category.model.Categories;
 
-@Module public class InteractorsModule {
+@Module
+public class InteractorsModule {
 
-  @Provides
-  Categories provideFindItemsInteractor() {
-    return new Categories();
-  }
+    @Provides
+    Categories provideFindItemsInteractor() {
+        return new Categories();
+    }
 }

@@ -20,7 +20,7 @@ import gdg.androidtitlan.dagger2_demo.category.model.Category;
 
 public interface Presenter {
 
-  void onResume();
+    void onResume();
 
-  void onItemSelected(Category category, int position);
+    void onItemSelected(Category category, int position);
 }
