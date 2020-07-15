@@ -9,7 +9,7 @@ android:
   components:
      - tools
      - platform-tools
-     - build-tools-29.0.1
+     - build-tools-29.0.3
      - android-29
      - extra-android-support
      - extra-google-google_play_services
@@ -22,4 +22,4 @@ licenses:
     - 'google-gdk-license-.+'
 
 script:
-  - ./gradlew checkstyle assemble testDebug
+  - ./gradlew checkstyle assemble
