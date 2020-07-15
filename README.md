@@ -1,6 +1,6 @@
 # Dagger2-MVP-Sample [![Build Status](https://travis-ci.org/erikjhordan-rey/Dagger2-MVP-Sample.svg?branch=master)](https://travis-ci.org/erikjhordan-rey/Dagger2-MVP-Sample)
 
-Example Dagger 2 using MVP pattern to show how to use this library and pattern in our android applications.
+Example Dagger 2 using the MVP pattern to show how to use dagger library and inside MVP pattern in our android applications.
 
 Inspired in googlesamples / [android-topeka](https://github.com/googlesamples/android-topeka)
 
@@ -14,7 +14,6 @@ MarioKart Kata for Android Developers The main goal is to practice Dependency in
 
 Libraries used on the sample project
 ------------------------------------
-* [ButterKnife][1]
 * [Dagger 2][2]
 
 
@@ -26,7 +25,7 @@ Libraries used on the sample project
 Do you want to contribute?
 --------------------------
 
-Feel free to report or add any useful feature, I will be glad to improve it with your help, before submitting your code please check the [codestyle](https://github.com/square/java-code-styles).
+Feel free to report or add any useful feature, I will be glad to improve it with your help.
 
 
 Developed By
@@ -34,11 +33,6 @@ Developed By
 
 * Erik Jhordan Rey  - <erikjhordan.rey@gmail.com>
 
-
-Do you want to contribute?
---------------------------
-
-Feel free to report or add any useful feature, I will be glad to improve it with your help, before submitting your code please check the [codestyle](https://github.com/square/java-code-styles).
 
 License
 -------
@@ -57,6 +51,4 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
-
-[1]: https://github.com/JakeWharton/butterknife
 [2]: https://github.com/google/dagger
