@@ -23,4 +23,4 @@ licenses:
     - 'android-sdk-preview-license-.+'
 
 script:
-  - ./gradlew checkstyle assemble
+  - ./gradlew assemble
