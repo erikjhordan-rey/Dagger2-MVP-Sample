@@ -27,7 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setupComponent((AppComponent) CategoryApplication.get(this).component());
+    setupComponent(CategoryApplication.get(this).component());
   }
 
   protected abstract void setupComponent(AppComponent appComponent);

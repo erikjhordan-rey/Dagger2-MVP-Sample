@@ -16,27 +16,16 @@
 
 package gdg.androidtitlan.dagger2_demo.category.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-
+import gdg.androidtitlan.dagger2_demo.category.model.Category;
+import gdg.androidtitlan.dagger2_demo.databinding.ItemCategoryBinding;
 import java.util.Collections;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import gdg.androidtitlan.dagger2_demo.R;
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
-
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryViewHolder> {
 
     private List<Category> categories;
     private ItemClickListener itemClickListener;
@@ -48,34 +37,16 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @NonNull
     @Override
     public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        final View itemView =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false);
-        return new CategoryViewHolder(itemView);
+        return new CategoryViewHolder(ItemCategoryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, final int position) {
         final Category category = categories.get(position);
-        bind(holder, category);
-
+        holder.bind(category);
         holder.itemView.setOnClickListener(v -> {
-            if (itemClickListener != null) {
-                itemClickListener.onItemClick(category, position);
-            }
+            if (itemClickListener != null) itemClickListener.onItemClick(category, position);
         });
-    }
-
-    private void bind(CategoryViewHolder holder, Category category) {
-        holder.textView.setText(category.getName());
-        holder.textView.setBackgroundColor(
-                getColor(holder.textView.getContext(), category.getPrimaryColor()));
-        holder.imageView.setImageResource(category.getIcon());
-        holder.imageView.setBackgroundColor(
-                getColor(holder.imageView.getContext(), category.getBackgroundColor()));
-    }
-
-    private int getColor(Context context, @ColorRes int colorRes) {
-        return ContextCompat.getColor(context, colorRes);
     }
 
     @Override
@@ -93,19 +64,5 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     public interface ItemClickListener {
         void onItemClick(Category category, int position);
-    }
-
-    static class CategoryViewHolder extends RecyclerView.ViewHolder {
-
-        @BindView(R.id.image_category_icon)
-        ImageView imageView;
-
-        @BindView(R.id.label_category_name)
-        TextView textView;
-
-        CategoryViewHolder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
-        }
     }
 }
