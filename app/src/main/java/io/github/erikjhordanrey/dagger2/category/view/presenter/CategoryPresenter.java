@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.view.presenter;
+package io.github.erikjhordanrey.dagger2.category.view.presenter;
 
-import gdg.androidtitlan.dagger2_demo.category.model.Callback;
-import gdg.androidtitlan.dagger2_demo.category.model.Categories;
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
+import io.github.erikjhordanrey.dagger2.category.model.Callback;
+import io.github.erikjhordanrey.dagger2.category.model.Categories;
+import io.github.erikjhordanrey.dagger2.category.model.Category;
 import java.util.List;
 
 public class CategoryPresenter implements Presenter, Callback {

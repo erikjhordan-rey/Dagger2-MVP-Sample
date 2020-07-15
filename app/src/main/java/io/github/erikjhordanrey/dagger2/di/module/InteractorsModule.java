@@ -7,11 +7,11 @@
  * the License for the specific language governing permissions and limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.di.module;
+package io.github.erikjhordanrey.dagger2.di.module;
 
 import dagger.Module;
 import dagger.Provides;
-import gdg.androidtitlan.dagger2_demo.category.model.Categories;
+import io.github.erikjhordanrey.dagger2.category.model.Categories;
 
 @Module
 public class InteractorsModule {

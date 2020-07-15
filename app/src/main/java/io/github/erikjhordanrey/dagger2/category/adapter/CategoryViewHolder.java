@@ -1,10 +1,10 @@
-package gdg.androidtitlan.dagger2_demo.category.adapter;
+package io.github.erikjhordanrey.dagger2.category.adapter;
 
 import androidx.annotation.NonNull;
 import static androidx.core.content.ContextCompat.getColor;
 import androidx.recyclerview.widget.RecyclerView;
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
-import gdg.androidtitlan.dagger2_demo.databinding.ItemCategoryBinding;
+import io.github.erikjhordanrey.dagger2.category.model.Category;
+import gdg.androidtitlan.dagger2.databinding.ItemCategoryBinding;
 
 class CategoryViewHolder extends RecyclerView.ViewHolder {
 

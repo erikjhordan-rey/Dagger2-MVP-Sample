@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.model;
+package io.github.erikjhordanrey.dagger2.category.model;
 
 public class Category {
 

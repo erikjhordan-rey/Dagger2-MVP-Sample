@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo;
+package io.github.erikjhordanrey.dagger2;
 
 import android.app.Application;
 import android.content.Context;
-import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
-import gdg.androidtitlan.dagger2_demo.di.component.DaggerAppComponent;
+import io.github.erikjhordanrey.dagger2.di.component.AppComponent;
+import io.github.erikjhordanrey.dagger2.di.component.DaggerAppComponent;
 
 public class CategoryApplication extends Application {
 

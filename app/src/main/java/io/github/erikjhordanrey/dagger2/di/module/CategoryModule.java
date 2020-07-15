@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.di.module;
+package io.github.erikjhordanrey.dagger2.di.module;
 
 import dagger.Module;
 import dagger.Provides;
-import gdg.androidtitlan.dagger2_demo.category.model.Categories;
-import gdg.androidtitlan.dagger2_demo.category.view.presenter.CategoryPresenter;
-import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
+import io.github.erikjhordanrey.dagger2.category.model.Categories;
+import io.github.erikjhordanrey.dagger2.category.view.presenter.CategoryPresenter;
+import io.github.erikjhordanrey.dagger2.category.view.presenter.Presenter;
 
 @Module
 public class CategoryModule {

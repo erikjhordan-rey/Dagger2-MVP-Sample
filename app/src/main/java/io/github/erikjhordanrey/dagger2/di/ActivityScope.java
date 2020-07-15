@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.di;
+package io.github.erikjhordanrey.dagger2.di;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

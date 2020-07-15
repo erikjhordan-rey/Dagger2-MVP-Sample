@@ -14,10 +14,16 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.model;
+package io.github.erikjhordanrey.dagger2.di.component;
 
-import java.util.List;
+import dagger.Component;
+import io.github.erikjhordanrey.dagger2.category.model.Categories;
+import io.github.erikjhordanrey.dagger2.di.module.InteractorsModule;
+import javax.inject.Singleton;
 
-public interface Callback {
-  void onLoadCategories(List<Category> categories);
+@Singleton
+@Component(modules = {InteractorsModule.class})
+public interface AppComponent {
+
+    Categories getFindItemsInteractor();
 }

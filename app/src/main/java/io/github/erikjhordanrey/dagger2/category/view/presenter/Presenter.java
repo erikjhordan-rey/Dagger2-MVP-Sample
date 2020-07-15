@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.view.presenter;
+package io.github.erikjhordanrey.dagger2.category.view.presenter;
 
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
+import io.github.erikjhordanrey.dagger2.category.model.Category;
 
 public interface Presenter {
 

@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gdg.androidtitlan.dagger2_demo">
+    package="gdg.androidtitlan.dagger2">
 
     <application
-        android:name=".CategoryApplication"
+        android:name="io.github.erikjhordanrey.dagger2.CategoryApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".category.view.activity.CategoryActivity"
+            android:name="io.github.erikjhordanrey.dagger2.category.view.activity.CategoryActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

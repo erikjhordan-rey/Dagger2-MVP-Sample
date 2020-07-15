@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.model;
+package io.github.erikjhordanrey.dagger2.category.model;
 
 import android.os.Handler;
-import gdg.androidtitlan.dagger2_demo.R;
+import gdg.androidtitlan.dagger2.R;
 import java.util.ArrayList;
 import java.util.List;
 

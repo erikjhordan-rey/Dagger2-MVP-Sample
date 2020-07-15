@@ -14,18 +14,21 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.di.component;
+package io.github.erikjhordanrey.dagger2.common;
 
-import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.category.view.activity.CategoryActivity;
-import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
-import gdg.androidtitlan.dagger2_demo.di.ActivityScope;
-import gdg.androidtitlan.dagger2_demo.di.module.CategoryModule;
+import android.os.Bundle;
 
-@ActivityScope
-@Component(dependencies = AppComponent.class, modules = CategoryModule.class)
-public interface CategoryComponent {
-    void inject(CategoryActivity categoryActivity);
+import androidx.appcompat.app.AppCompatActivity;
 
-    Presenter getMainPresenter();
+import io.github.erikjhordanrey.dagger2.CategoryApplication;
+import io.github.erikjhordanrey.dagger2.di.component.AppComponent;
+
+public abstract class BaseActivity extends AppCompatActivity {
+
+  @Override protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setupComponent(CategoryApplication.get(this).component());
+  }
+
+  protected abstract void setupComponent(AppComponent appComponent);
 }

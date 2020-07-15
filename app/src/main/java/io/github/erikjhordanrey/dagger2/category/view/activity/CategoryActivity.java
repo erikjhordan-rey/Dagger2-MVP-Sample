@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.view.activity;
+package io.github.erikjhordanrey.dagger2.category.view.activity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
-import gdg.androidtitlan.dagger2_demo.category.adapter.CategoryAdapter;
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
-import gdg.androidtitlan.dagger2_demo.category.view.presenter.CategoryPresenter;
-import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
-import gdg.androidtitlan.dagger2_demo.common.BaseActivity;
-import gdg.androidtitlan.dagger2_demo.databinding.ActivityCategoryBinding;
-import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
-import gdg.androidtitlan.dagger2_demo.di.component.DaggerCategoryComponent;
-import gdg.androidtitlan.dagger2_demo.di.module.CategoryModule;
+import io.github.erikjhordanrey.dagger2.category.adapter.CategoryAdapter;
+import io.github.erikjhordanrey.dagger2.category.model.Category;
+import io.github.erikjhordanrey.dagger2.category.view.presenter.CategoryPresenter;
+import io.github.erikjhordanrey.dagger2.category.view.presenter.Presenter;
+import io.github.erikjhordanrey.dagger2.common.BaseActivity;
+import gdg.androidtitlan.dagger2.databinding.ActivityCategoryBinding;
+import io.github.erikjhordanrey.dagger2.di.component.AppComponent;
+import io.github.erikjhordanrey.dagger2.di.component.DaggerCategoryComponent;
+import io.github.erikjhordanrey.dagger2.di.module.CategoryModule;
 import java.util.List;
 import javax.inject.Inject;
 

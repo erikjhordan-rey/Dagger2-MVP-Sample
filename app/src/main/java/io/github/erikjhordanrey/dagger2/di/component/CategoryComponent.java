@@ -14,16 +14,18 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.di.component;
+package io.github.erikjhordanrey.dagger2.di.component;
 
 import dagger.Component;
-import gdg.androidtitlan.dagger2_demo.category.model.Categories;
-import gdg.androidtitlan.dagger2_demo.di.module.InteractorsModule;
-import javax.inject.Singleton;
+import io.github.erikjhordanrey.dagger2.category.view.activity.CategoryActivity;
+import io.github.erikjhordanrey.dagger2.category.view.presenter.Presenter;
+import io.github.erikjhordanrey.dagger2.di.ActivityScope;
+import io.github.erikjhordanrey.dagger2.di.module.CategoryModule;
 
-@Singleton
-@Component(modules = {InteractorsModule.class})
-public interface AppComponent {
+@ActivityScope
+@Component(dependencies = AppComponent.class, modules = CategoryModule.class)
+public interface CategoryComponent {
+    void inject(CategoryActivity categoryActivity);
 
-    Categories getFindItemsInteractor();
+    Presenter getMainPresenter();
 }

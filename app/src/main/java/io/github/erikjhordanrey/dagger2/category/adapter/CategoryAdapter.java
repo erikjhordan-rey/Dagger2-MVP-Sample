@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.category.adapter;
+package io.github.erikjhordanrey.dagger2.category.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import gdg.androidtitlan.dagger2_demo.category.model.Category;
-import gdg.androidtitlan.dagger2_demo.databinding.ItemCategoryBinding;
+import io.github.erikjhordanrey.dagger2.category.model.Category;
+import gdg.androidtitlan.dagger2.databinding.ItemCategoryBinding;
 import java.util.Collections;
 import java.util.List;
 

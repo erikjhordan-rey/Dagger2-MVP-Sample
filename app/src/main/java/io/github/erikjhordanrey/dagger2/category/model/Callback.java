@@ -14,21 +14,10 @@
  * limitations under the License.
  */
 
-package gdg.androidtitlan.dagger2_demo.common;
+package io.github.erikjhordanrey.dagger2.category.model;
 
-import android.os.Bundle;
+import java.util.List;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import gdg.androidtitlan.dagger2_demo.CategoryApplication;
-import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
-
-public abstract class BaseActivity extends AppCompatActivity {
-
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setupComponent(CategoryApplication.get(this).component());
-  }
-
-  protected abstract void setupComponent(AppComponent appComponent);
+public interface Callback {
+  void onLoadCategories(List<Category> categories);
 }
