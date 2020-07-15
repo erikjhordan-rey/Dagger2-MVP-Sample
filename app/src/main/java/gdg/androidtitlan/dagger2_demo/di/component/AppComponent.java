@@ -23,10 +23,10 @@ import gdg.androidtitlan.dagger2_demo.di.module.AppModule;
 import gdg.androidtitlan.dagger2_demo.di.module.InteractorsModule;
 import javax.inject.Singleton;
 
-@Singleton @Component(modules = {
-    AppModule.class, InteractorsModule.class
-}) public interface AppComponent {
-  void inject(CategoryApplication categoryApplication);
+@Singleton
+@Component(modules = {AppModule.class, InteractorsModule.class})
+public interface AppComponent {
+    void inject(CategoryApplication categoryApplication);
 
-  Categories getFindItemsInteractor();
+    Categories getFindItemsInteractor();
 }

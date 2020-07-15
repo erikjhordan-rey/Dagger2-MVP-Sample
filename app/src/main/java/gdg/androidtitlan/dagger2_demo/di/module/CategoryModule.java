@@ -22,20 +22,22 @@ import gdg.androidtitlan.dagger2_demo.category.model.Categories;
 import gdg.androidtitlan.dagger2_demo.category.view.presenter.CategoryPresenter;
 import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
 
-@Module public class CategoryModule {
+@Module
+public class CategoryModule {
 
-  private CategoryPresenter.View view;
+    private CategoryPresenter.View view;
 
-  public CategoryModule(CategoryPresenter.View view) {
-    this.view = view;
-  }
+    public CategoryModule(CategoryPresenter.View view) {
+        this.view = view;
+    }
 
-  @Provides public CategoryPresenter.View provideView() {
-    return view;
-  }
+    @Provides
+    CategoryPresenter.View provideView() {
+        return view;
+    }
 
-  @Provides
-  public Presenter providePresenter(CategoryPresenter.View categoryView, Categories categories) {
-    return new CategoryPresenter(categoryView, categories);
-  }
+    @Provides
+    Presenter providePresenter(CategoryPresenter.View categoryView, Categories categories) {
+        return new CategoryPresenter(categoryView, categories);
+    }
 }

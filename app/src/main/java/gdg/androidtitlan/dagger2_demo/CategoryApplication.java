@@ -20,27 +20,27 @@ import android.app.Application;
 import android.content.Context;
 import gdg.androidtitlan.dagger2_demo.di.component.AppComponent;
 import gdg.androidtitlan.dagger2_demo.di.component.DaggerAppComponent;
-import gdg.androidtitlan.dagger2_demo.di.module.AppModule;
 
 public class CategoryApplication extends Application {
 
-  private AppComponent component;
+    private AppComponent component;
 
-  public static CategoryApplication get(Context context) {
-    return (CategoryApplication) context.getApplicationContext();
-  }
+    public static CategoryApplication get(Context context) {
+        return (CategoryApplication) context.getApplicationContext();
+    }
 
-  @Override public void onCreate() {
-    super.onCreate();
-    setupGraph();
-  }
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        setupGraph();
+    }
 
-  private void setupGraph() {
-    component = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-    component.inject(this);
-  }
+    private void setupGraph() {
+        component = DaggerAppComponent.builder().build();
+        component.inject(this);
+    }
 
-  public AppComponent component() {
-    return component;
-  }
+    public AppComponent component() {
+        return component;
+    }
 }

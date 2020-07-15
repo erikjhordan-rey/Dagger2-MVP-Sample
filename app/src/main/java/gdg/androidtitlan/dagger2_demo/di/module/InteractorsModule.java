@@ -15,7 +15,8 @@ import gdg.androidtitlan.dagger2_demo.category.model.Categories;
 
 @Module public class InteractorsModule {
 
-  @Provides public Categories provideFindItemsInteractor() {
+  @Provides
+  Categories provideFindItemsInteractor() {
     return new Categories();
   }
 }

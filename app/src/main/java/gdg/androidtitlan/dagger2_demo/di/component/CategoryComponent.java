@@ -22,9 +22,10 @@ import gdg.androidtitlan.dagger2_demo.category.view.presenter.Presenter;
 import gdg.androidtitlan.dagger2_demo.di.ActivityScope;
 import gdg.androidtitlan.dagger2_demo.di.module.CategoryModule;
 
-@ActivityScope @Component(dependencies = AppComponent.class, modules = CategoryModule.class)
+@ActivityScope
+@Component(dependencies = AppComponent.class, modules = CategoryModule.class)
 public interface CategoryComponent {
-  void inject(CategoryActivity categoryActivity);
+    void inject(CategoryActivity categoryActivity);
 
-  Presenter getMainPresenter();
+    Presenter getMainPresenter();
 }

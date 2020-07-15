@@ -22,15 +22,18 @@ import dagger.Provides;
 import gdg.androidtitlan.dagger2_demo.CategoryApplication;
 import javax.inject.Singleton;
 
-@Module public class AppModule {
+@Module
+public class AppModule {
 
-  private CategoryApplication categoryApplication;
+    private CategoryApplication categoryApplication;
 
-  public AppModule(CategoryApplication categoryApplication) {
-    this.categoryApplication = categoryApplication;
-  }
+    public AppModule(CategoryApplication categoryApplication) {
+        this.categoryApplication = categoryApplication;
+    }
 
-  @Provides @Singleton public Application provideApplication() {
-    return categoryApplication;
-  }
+    @Provides
+    @Singleton
+    Application provideApplication() {
+        return categoryApplication;
+    }
 }
